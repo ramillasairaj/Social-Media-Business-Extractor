@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Data Extractor</title>
+    <link rel="stylesheet" href="extract-selectively.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Business Data Extractor</h2>
+
+        <div class="form-group">
+            <label for="location">Select or Enter Country:</label>
+            <input type="text" id="location" list="location-list" placeholder="Select or Type Country">
+            <datalist id="location-list">
+                <option value="India">
+                <option value="USA">
+                <option value="UK">
+                <option value="Australia">
+            </datalist>
+        </div>
+
+        <div class="form-group">
+            <label for="city-state">Select or Enter State/City:</label>
+            <input type="text" id="city-state" list="city-state-list" placeholder="Select or Type City">
+            <datalist id="city-state-list">
+                <option value="Hyderabad">
+                <option value="Bangalore">
+                <option value="Mumbai">
+            </datalist>
+        </div>
+
+        <div class="form-group">
+            <label for="business-type">Select or Enter Business Type:</label>
+            <input type="text" id="business-type" list="business-type-list" placeholder="Select or Type Business Type">
+            <datalist id="business-type-list">
+                <option value="Restaurant">
+                <option value="Technology">
+                <option value="Startup">
+            </datalist>
+        </div>
+
+        <div class="form-group">
+            <label for="business-stage">Select or Enter Business Stage:</label>
+            <input type="text" id="business-stage" list="business-stage-list" placeholder="Select or Type Business Stage">
+            <datalist id="business-stage-list">
+                <option value="Existence">
+                <option value="Growth">
+            </datalist>
+        </div>
+
+        <div class="form-group">
+            <label for="platform">Select or Enter Platform:</label>
+            <input type="text" id="platform" list="platform-list" placeholder="Select or Type Platform">
+            <datalist id="platform-list">
+                <option value="Instagram">
+                <option value="WhatsApp">
+                <option value="Facebook">
+                <option value="LinkedIn">
+            </datalist>
+        </div>
+
+        <div class="form-group">
+            <label for="extract-followers">Extract Followers:</label>
+            <input type="text" id="extract-followers" list="extract-followers-list" placeholder="Select Yes/No">
+            <datalist id="extract-followers-list">
+                <option value="Yes">
+                <option value="No">
+            </datalist>
+        </div>
+
+        <button id="extract-btn">Extract Data</button>
+
+        <h3>Search Results</h3>
+        <input type="text" id="search-bar" placeholder="Search by username, platform, or location..." onkeyup="performSearch()">
+
+        <h3>Results:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl. No</th>
+                    <th>Username</th>
+                    <th>Platform</th>
+                    <th>Location</th>
+                    <th>Business Type</th>
+                    <th>Followers Extracted</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+            <tbody id="results-table-body">
+                <tr><td colspan="7">Select fields and click Extract Data</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="extract-selectively.js"></script>
+</body>
+</html>

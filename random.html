@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA -Extract Randomly</title>
+    <link rel="stylesheet" href="random.css">
+</head>
+<body>
+    <div class="container">
+        <h2> Data -Extract Randomly</h2>
+  
+        <!-- Location Dropdown + Manual Input -->
+        <label for="location">Select or Enter Location:</label>
+        <input type="text" id="location" list="location-list" placeholder="Select or Type Location">
+        <datalist id="location-list">
+            <option value="Hyderabad">
+            <option value="Bangalore">
+            <option value="Mumbai">
+            <option value="Delhi">
+            <option value="Chennai">
+        </datalist>
+
+        <!-- Platform Dropdown + Manual Input -->
+        <label for="platform">Select or Enter Platform:</label>
+        <input type="text" id="platform" list="platform-list" placeholder="Select or Type Platform">
+        <datalist id="platform-list">
+            <option value="Instagram">
+            <option value="LinkedIn">
+            <option value="Facebook">
+            <option value="Twitter">
+        </datalist>
+
+        <!-- Search Bar -->
+        <input type="text" id="search-bar" placeholder="Search..." onkeyup="performSearch()">
+
+        <!-- Extract Followers Dropdown -->
+        <label for="extract-followers">Extract Followers:</label>
+        <select id="extract-followers">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <!-- Results Section -->
+        <div class="results" id="search-results" style="display: none;"></div>
+        <button id="extract-btn">SEARCH</button>
+
+        <!-- Table for Results -->
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Username</th>
+                    <th>Platform</th>
+                    <th>Location</th>
+                    <th>Business Type</th>
+                    <th>Active</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+            <tbody id="results-table-body">
+                <tr><td colspan="7">No results found</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Go Home Button -->
+        <a href="home.html"> <button type="button" id="go-home-button">GO HOME</button>
+    </div>
+
+    <script src="random.js"></script>
+</body>
+</html>
